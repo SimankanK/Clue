@@ -1,0 +1,69 @@
+package GUI;
+
+import org.w3c.dom.events.MouseEvent;
+
+import java.awt.*;
+import java.util.*;
+
+public class GuiScreen {
+
+    private static GuiScreen screen;
+    private HashMap<String, GuiPanel> panels;
+    private String curPanel = "";
+
+    private GuiScreen() {
+        panels = new HashMap<String, GuiPanel>();
+    }
+
+    public static GuiScreen getInstance(){
+        if(screen == null){
+            screen = new GuiScreen();
+        }
+        return screen;
+    }
+
+    public void update(){
+        if(panels.get(curPanel) != null){
+            panels.get(curPanel).update();
+        }
+    }
+
+    public void render(Graphics2D x){
+        if(panels.get(curPanel) != null){
+            panels.get(curPanel).render(x);
+        }
+    }
+
+    public void add(String panelName, GuiPanel panel){
+        panels.put(panelName, panel);
+    }
+
+    public void setCurPanel(String panelName){
+        this.curPanel = panelName;
+    }
+
+    public void mousePressed(MouseEvent e){
+        if(panels.get(curPanel) != null){
+            panels.get(curPanel).mousePressed(e);
+        }
+    }
+
+    public void mouseReleased(MouseEvent e){
+        if(panels.get(curPanel) != null){
+            panels.get(curPanel).mouseReleased(e);
+        }
+    }
+
+    public void mouseDragged(MouseEvent e){
+        if(panels.get(curPanel) != null){
+            panels.get(curPanel).mouseDragged(e);
+        }
+    }
+
+    public void mouseMoved(MouseEvent e){
+        if(panels.get(curPanel) != null){
+            panels.get(curPanel).mouseMoved(e);
+        }
+    }
+
+}
