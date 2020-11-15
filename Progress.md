@@ -6,6 +6,11 @@
 We want to create the famous board game: Clue.
 
 ### GUI:
+#### Currenly have:
+* Generation of Board and borders
+* Spacing for buttons and outline
+* Tile class for each indivudal tile
+#### Moving foward:
 * Add main menu for the game (start button, credits)
 * Add possible sounds (doors open/close, players moving)
 * Implement tiles and player movement using mouse
