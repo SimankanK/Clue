@@ -1,6 +1,6 @@
-# Progress Report
 ###### November 15th, 2020
 ###### John Solomon, Riyanka Ray, Simanakn Kafle
+# Progress Report:
 ## Overall:
 We want to create the famous board game: Clue.
 
