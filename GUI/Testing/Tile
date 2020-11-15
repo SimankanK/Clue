@@ -1,0 +1,17 @@
+// Progressive class
+
+public class Tile {
+    boolean hasPlayer = false;
+
+    public void setPlayerOn(){
+        hasPlayer = true;
+    }
+
+    public void playerLeaves(){
+        hasPlayer = false;
+    }
+
+    public boolean isOccupied(){
+        return hasPlayer;
+    }
+}
