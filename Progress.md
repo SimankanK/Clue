@@ -1,5 +1,6 @@
+###### John Solomon, Riyanka Ray, Simanakan Kafle
 ###### November 15th, 2020
-###### John Solomon, Riyanka Ray, Simanakn Kafle
+###### Class: CS211, 2H2
 # Progress Report:
 ## Overall:
 We want to create the famous board game: Clue.
