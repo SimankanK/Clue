@@ -1,9 +1,13 @@
 // Progressive class
 
 public class Tile {
-    boolean hasPlayer = false;
+    boolean hasPlayer;
+    
+    public tile(boolean hasPlayer){
+        this.hasplayer = hasPlayer;
+    }
 
-    public void setPlayerOn(){
+    public void playerOn(){
         hasPlayer = true;
     }
 
