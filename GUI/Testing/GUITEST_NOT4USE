@@ -1,0 +1,63 @@
+/* THIS IS A TEST JAVA FILE
+* TESTING IMAGE, COUNTER, AND BUTTONS
+* NOT SUPPOSE TO WORK TO BE THE ACTUAL GAME
+ */
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class GUITEST_NOT4USE implements ActionListener{
+    int counter = 0;
+    JFrame frame;
+    JButton button;
+    JPanel panel;
+    JLabel label;
+    JPanel theBoard;
+    Container container;
+    ImageIcon image;
+
+    public GUITEST_NOT4USE() {
+        frame = new JFrame();
+        button = new JButton("Button");
+        button.addActionListener(this);
+        label = new JLabel("Clicks: " + "0");
+
+        panel = new JPanel();
+        panel.setBorder(BorderFactory.createEmptyBorder(400, 400, 400, 400));
+        panel.setLayout(new GridLayout(0, 1));
+        panel.add(button);
+        panel.add(label);
+        image = new ImageIcon("clueBoard.jpg");
+        label.setIcon(image);
+
+        frame.add(panel, BorderLayout.CENTER);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        container = frame.getContentPane();
+        frame.setTitle("Clue");
+        frame.pack();
+
+        theBoard = new JPanel();
+        theBoard.setBounds(0, 0, 10, 10);
+        theBoard.setBackground(Color.RED);
+        panel.add(theBoard);
+
+        frame.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new GUITEST_NOT4USE();
+    }
+
+    /**
+     * Invoked when an action occurs.
+     *
+     * @param e
+     */
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        counter++;
+        label.setText("Clicks: "+ counter);
+    }
+}
