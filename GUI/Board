@@ -1,0 +1,38 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class Board {
+
+    JFrame window;
+    Container con;
+    JPanel picture;
+    JLabel pictureLabel;
+    ImageIcon image;
+
+    public static void main(String[] args) {
+        new Board();
+    }
+
+    public Board(){
+        window = new JFrame();
+        window.setSize(1100,950);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.getContentPane().setBackground(Color.black);
+        window.setLayout(null);
+        con = window.getContentPane();
+
+        picture = new JPanel();
+        picture.setBounds(10, 10, 800, 760);
+        picture.setBackground(Color.red);
+        con.add(picture);
+
+        pictureLabel = new JLabel();
+        image = new ImageIcon("clueBoard.jpg");
+        pictureLabel.setIcon(image);
+        picture.add(pictureLabel);
+
+        window.setVisible(true);
+    }
+
+
+}
